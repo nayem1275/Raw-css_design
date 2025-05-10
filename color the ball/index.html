@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          #ball{
+                   width: 400px;
+                   height: 400px;
+                   border: 1px solid;
+                   border-radius: 50%;
+                   margin: auto;
+          }
+
+          #start{
+                   background-color: rgb(71, 71, 71);
+                   padding: 15px 25px;
+                   left: 50%;
+                   top: 50%;
+                   transform: translate(-50%,-50%);
+                   position: absolute;
+                   color: white;
+                   font-size: 22px;
+                   border-radius: 4px;
+                   border: none;
+                   cursor: pointer;
+                   width:200px;
+                   
+          }
+ #stop{
+               background-color: rgb(71, 71, 71);
+                   padding: 15px 25px;
+                   left: 50%;
+                   top: 60%;
+                   transform: translate(-50%,-50%);
+                   position: absolute;
+                   color: white;
+                   font-size: 22px;
+                   border-radius: 4px;
+                   border: none;
+                   cursor: pointer;
+                   width:200px;
+ }
+
+
+         
+    </style>
+</head>
+<body>
+      <div id="ball"></div>
+      <button  id="start" onclick="start()">Start</button>
+      <button id="stop" onclick="stop()">Stop</button>
+      
+
+      <script>
+                
+                let stopbutton=document.getElementById('stop');
+                let startbutton=document.getElementById('start')
+                let ball=document.getElementById('ball');
+                let timer=null;
+
+                function colorTheBall(){
+                           let code1=Math.random();
+                             let code2=Math.random();
+                             let code3=Math.random();
+  
+                              let color1=Math.round(code1*255);
+                             let color2=Math.round(code2*255);
+                              let color3=Math.round(code3*255);
+                              ball.style.background=`rgba(${color1},${color2},${color3})`
+                }
+
+                function start(){
+                                 if(timer!==null){
+                                     clearInterval(timer);
+                                 }
+                                  timer=setInterval(colorTheBall,1000)
+
+                };
+
+
+                function stop(){
+                          clearInterval(timer);
+                }
+
+                 
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+                
+      </script>
+</body>
+</html>

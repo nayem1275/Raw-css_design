@@ -1,0 +1,88 @@
+*{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+}
+
+body{
+          background:#6AFB92 ;
+}
+
+.app{
+       width: 80%;
+       background-color: white;
+       margin:150px auto;
+       max-width: 650px;
+       border-radius:10px;
+       text-align: center;
+}
+.app h1{
+           color: #82f3a2;
+           font-size:46px;
+           font-weight: 600;
+           padding: 25px  0px;
+}
+.app h1 span{
+    color: rgb(255, 145, 0);
+     
+}
+
+.questionSection{
+          width: 100%;
+          font-size:20px;
+          color: rgb(255, 145, 0) ;
+}
+
+#options{
+           margin-top: 25px;
+           font-size: 18px;
+}
+
+#options .btn{
+                  width:80%;
+                  text-align: left;
+                  font-size:20px;
+                  font-weight: 600;
+                  padding:8px 6px;
+                  margin:10px;
+                  border-radius: 5px;
+                  outline: none;
+                  border:none;
+                  /* background-color: rgb(230, 219, 219); */
+                  letter-spacing: 2px;
+     
+}
+
+#options .btn:hover{
+                       background-color: #82f3a2;
+                       color: white;
+}
+#next{
+         width:30%;
+         margin-bottom:20px;
+         margin-top: 25px;
+         padding: 12px;
+         border-radius: 4px;
+         border: none;
+         background-color:rgb(255, 145, 0);
+         color: white;
+         font-weight: 600;
+         font-size: 22px;
+         letter-spacing: 3px;
+         transition: background-color 0.5s;
+}
+
+#next:hover{
+              background-color: #6AFB92;
+              cursor: pointer;
+}
+
+.correct{
+    background-color:green;
+    
+}
+
+.incorect{
+     color: red;
+}
